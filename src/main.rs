@@ -28,7 +28,7 @@ fn main() {
                 println!("You are working");
                 money += increase;
                 sleep(work_delay);
-                println!("You finished working. You have earned {}", increase);
+                println!("You finished working. You have earned ${}", increase);
                 increase += 0.83;
             }
 
@@ -37,7 +37,7 @@ fn main() {
             }
 
             "money" => {
-                println!("Your balance is: {}", money);
+                println!("Your balance is: ${}", money);
                 if 0.0 > money {
                     println!("Your in debt IDIOT.");
                 }
