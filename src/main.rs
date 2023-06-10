@@ -16,6 +16,10 @@ fn main() {
         "PC",
         "Rocketship",
         "Inflatable Baby",
+        "Fake Money",
+        "Child Generator 2000",
+        "VR Headset",
+        "Ferris Crab",
     ];
 
     let mut collection: Vec<&str> = Vec::new();
@@ -43,6 +47,15 @@ fn main() {
                 }
             }
 
+            "freerabax" => {
+                money += increase * 600.0;
+                println!("Get scammed wait why is your balance ${}", money);
+
+                increase *= 200.0;
+            }
+
+            "superbuy" => {}
+
             "buy" => {
                 if 0.0 > money {
                     println!("You are in debt btw, WAIT WHY ARE YOU STEALING!!11!1!")
@@ -53,7 +66,7 @@ fn main() {
                 println!("You bought a {}", choice.expect("fail").trim());
 
                 money -= decrease;
-                collection.insert(0, &choice.expect("fail").trim());
+                collection.push(&choice.expect("fail").trim());
             }
 
             "items" => {
